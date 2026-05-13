@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Meses</title>
+    <!-- CDN de Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+  </script>
+  <script src="./js/app.js" defer></script>
+
+  <style type="text/tailwindcss">
+    @import "tailwindcss"; 
+
+    @layer base {
+      :root {
+        @apply text-sm;
+        line-height: 1.6;
+      }
+    }
+      
+   </style>
+
+</head>
+<body class="bg-amber-200 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-amber-600">Consulta de Meses</h1>
+        
+        <label for="mesInput" class="block text-sm font-medium text-gray-700 mb-2">
+            Introduce un número de mes (1 - 12):
+        </label>
+        
+        <input type="number" id="mesInput" min="1" max="12" placeholder="Ej: 1"
+               class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        
+        <button onclick="consultarMes()" 
+                class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+            Consultar
+        </button>
+
+        <p id="resultado" class="mt-6 p-4 rounded bg-blue-50 text-blue-800 hidden">
+            <!-- Aquí aparecerá el mensaje -->
+        </p>
+    </div>
+
+    
+</body>
+</html>
+
